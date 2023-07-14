@@ -1,0 +1,50 @@
+<div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 h-auto">
+     
+     
+      <div class="flex justify-center border-2 mycc2 border-gray-300 rounded-xl p-6 bg-gray-100">
+        <div class="main">
+          <h1 CLASS="text-6xl">TO DO LIST</h1>
+        
+          <form class="form">
+            <div>
+             
+              <input id="inputtask" type="text" placeholder="Enter your task here" name="task" [(ngModel)]="addTaskResult"/>
+              <button type="button" (click)="addTask()" class="add">Add</button>
+            </div>
+            <h2>Tasks</h2>
+            <div *ngFor="let t of taskArr">
+              
+            <div id="inputtask2"><input type="checkbox"  id="check">{{t.taskName}}
+              <button type="button" class="btn1"data-toggle="modal" data-target="#exampleModalCenter" (click)="call(t)" >edit</button>
+            <button (click)="deleteTask(t)" class="btn2">delete</button></div>
+          
+            <div>
+            </div>
+            </div>
+
+          
+          </form>
+      
+  
+  </div>
+      </div>
+
+
+      <div class="flex justify-center  border-2 mycc border-gray-300 rounded-xl p-6 bg-gray-100">
+    
+              <div>
+                <input  name="task" [(ngModel)]="editTaskValue" id="inputtask3"/>
+                <button type="button" (click)="editTask()" class="update" id="btn3">update</button>
+              </div>
+          </div>
+     
+     
+
+  </div>
+  </div>
+
+
+
+  
+  
